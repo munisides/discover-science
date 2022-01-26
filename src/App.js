@@ -38,9 +38,9 @@ function App() {
           })}
         </div>
         {/* area info */}
-        <article className="field-info">
+        <article key={id} className="field-info">
           {/* <h3>Summary</h3> */}
-          {/* <h4>{ area }</h4> */}
+          <h4> Science: { area }</h4>
           {desc.map((item, index) => {
             return(
               <div key={item.index} className="field-desc">
@@ -51,11 +51,16 @@ function App() {
           })}
         </article>
       </div>
-      <button type="button" className="btn">
+      <a type="button" className="btn" 
+        key={id}
+        href={url}
+        target="_blank"
+        rel="noreferrer"
+      >
         Learn More
-      </button>
+      </a>
     </section>
   )
 }
 
-export default App
+export default App;
